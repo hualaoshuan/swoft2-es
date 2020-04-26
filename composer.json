@@ -1,0 +1,26 @@
+{
+  "name": "hualaoshuan/swoft2-es",
+  "description": "extension for Swoft2-ElasticSearch",
+  "version": "v1.0.0",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "hualaoshuan"
+    }
+  ],
+  "require": {
+    "swoft/framework": "^2.0",
+    "php": ">=7.0",
+    "ext-json": ">=1.3.7",
+    "guzzlehttp/ringphp": "~1.0"
+  },
+  "suggest": {
+    "ext-curl": "*",
+    "monolog/monolog": "Allows for client-level logging and tracing"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hualaoshuan\\Elasticsearch\\": "src/"
+    }
+  }
+}
