@@ -1,6 +1,6 @@
 
 ## 安装
-`composer require hualaoshuan/swoft2-es:dev-master`
+`composer require hualaoshuan/swoft2-es`
 
 ## 使用方法
 1. 在对应的`config/dev`和`config/pro`目录下新建`es.php`配置文件
