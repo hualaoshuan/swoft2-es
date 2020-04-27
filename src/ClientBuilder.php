@@ -30,7 +30,7 @@ use Monolog\Processor\IntrospectionProcessor;
  *
  * @category Elasticsearch
  * @package  Elasticsearch\Common\Exceptions
- 
+
  */
 class ClientBuilder
 {
@@ -55,13 +55,13 @@ class ClientBuilder
     private $tracer;
 
     /** @var string */
-    private $connectionPool = '\Elasticsearch\ConnectionPool\StaticNoPingConnectionPool';
+    private $connectionPool = '\Hualaoshuan\Elasticsearch\ConnectionPool\StaticNoPingConnectionPool';
 
     /** @var  string */
-    private $serializer = '\Elasticsearch\Serializers\SmartSerializer';
+    private $serializer = '\Hualaoshuan\Elasticsearch\Serializers\SmartSerializer';
 
     /** @var  string */
-    private $selector = '\Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector';
+    private $selector = '\Hualaoshuan\Elasticsearch\ConnectionPool\Selectors\RoundRobinSelector';
 
     /** @var  array */
     private $connectionPoolArgs = [
@@ -532,7 +532,7 @@ class ClientBuilder
             $serializer = $this->serializer;
 
             $this->endpoint = function ($class) use ($serializer) {
-                $fullPath = '\\Elasticsearch\\Endpoints\\' . $class;
+                $fullPath = '\\Hualaoshuan\\Elasticsearch\\Endpoints\\' . $class;
                 if ($class === 'Bulk' || $class === 'Msearch' || $class === 'MsearchTemplate' || $class === 'MPercolate') {
                     return new $fullPath($serializer);
                 } else {
